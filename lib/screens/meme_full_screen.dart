@@ -1,28 +1,29 @@
-// lib/screens/meme_full_screen.dart
 import 'package:flutter/material.dart';
 
 class MemeFullScreen extends StatelessWidget {
-  final String memeText;
+  final String caption;
 
-  const MemeFullScreen({super.key, required this.memeText});
+  const MemeFullScreen({super.key, required this.caption});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
-      body: GestureDetector(
-        onTap: () => Navigator.pop(context),
-        child: Center(
-          child: Padding(
-            padding: const EdgeInsets.all(24.0),
-            child: Text(
-              memeText,
-              style: const TextStyle(
-                fontSize: 26,
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-              ),
-              textAlign: TextAlign.center,
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        backgroundColor: Colors.grey.shade100,
+        iconTheme: const IconThemeData(color: Colors.black),
+        elevation: 0,
+      ),
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(32.0),
+          child: Text(
+            caption,
+            textAlign: TextAlign.center,
+            style: const TextStyle(
+              fontSize: 24,
+              fontWeight: FontWeight.w600,
+              color: Colors.black87,
             ),
           ),
         ),
