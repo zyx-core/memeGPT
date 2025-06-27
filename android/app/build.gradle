@@ -7,13 +7,16 @@ plugins {
 
 android {
     namespace = "com.example.meme_gpt"
-    compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
+    compileSdk = 36// or 35 (match your Android SDK)
 
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+    defaultConfig {
+        applicationId = "com.example.meme_gpt"
+        minSdk = 21
+        targetSdk = 36 // or 35
+        versionCode = 1
+        versionName = "1.0"
     }
+
 
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_1_8
